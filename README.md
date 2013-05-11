@@ -15,13 +15,11 @@ Preparing the site
 
 1. Install the [Google Sitemap Generator plugin](http://wordpress.org/extend/plugins/google-sitemap-generator/) or an equivalent plugin to generate a [sitemap](http://www.sitemaps.org/protocol.html) for the WordPress site.
 
-2. The sitemap.xml file will contain a full list of URLs for the site except for paginated date/category/tag archive pages.
+2. The sitemap.xml file will contain a full list of URLs for the site except for paginated date/category/tag archive pages. The Wordpress theme will probably need to be modified to list all links to posts in a date/category/tag archive on one page (an example child theme I used on my wife's site is in the [doc](doc) folder).
 
-3. The Wordpress theme will probably need to be modified to list all links to posts in a date/category/tag archive on one page (an example child theme I used on my wife's site is in the [doc](doc) folder).
+3. Disable comments on all posts and pages with this MySQL query so the comment form won't show: `UPDATE wp_posts SET comment_status="closed";`
 
-4. Disable comments on all posts and pages with this MySQL query so the comment form won't show: `UPDATE wp_posts SET comment_status="closed";`
-
-5. Disable any plugins which require server-side calls from the front end (ex: AJAX polls) or which depend on external URLs (ex: Google Analytics).
+4. Disable any plugins which require server-side calls from the front end (ex: AJAX polls) or which depend on external URLs (ex: Google Analytics).
 
 Usage
 -----
